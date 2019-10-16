@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'ServerAutomatingSystem.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': 'MYSQL_SERVER_IP',
+        'PORT': 'MYSQL_SERVER_PORT',
+        'NAME': 'mysql',
+        'USER': 'MYSQL_USER',
+        'PASSWORD': 'MYSQL_PASSWORD'
     }
 }
 
@@ -105,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
